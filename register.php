@@ -50,6 +50,7 @@ if (isset($_POST['keypress'])) {
     if ($_SESSION['isValidationGood']) {
         echo "<span class='form-success'>Wszystko jest ok.</span>";
     }
+}
 
     $database->close();
 } else if ($_POST['email'] && $_POST['password'] && $_SESSION['isValidationGood']) {
@@ -99,5 +100,14 @@ if (isset($_POST['keypress'])) {
         passwordForm.classList.remove("input-error");
         passwordForm.classList.add("input-success");
     }
+
+    // if (!errorPassword && !errorEmail && !errorEmpty) {
+    //     form.forEach(element => {
+    //         if (element.tagName === "input") {
+    //             element.value = "";
+    //         }
+    //     })
+    // }
+
 
 </script>
