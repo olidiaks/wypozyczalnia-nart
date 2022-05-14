@@ -4,10 +4,15 @@ session_start();
 $errorEmpty = false;
 $errorEmail = false;
 $errorPassword = false;
+$isEmailEngaged = true;
+$isPasswordEngaged = true;
+
 if (isset($_POST['keypress'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $_SESSION['isValidationGood'] = true;
+
+    include 'database.php';
 
     if (empty($email) && empty($password)) {
         echo "<span class='form-error'>E-mail nie został podany.</span>";
@@ -26,21 +31,40 @@ if (isset($_POST['keypress'])) {
         $_SESSION['isValidationGood'] = false;
     }
 
+    $sql = "select * from Users where email = '$email';";
+    /** @noinspection PhpUndefinedVariableInspection */
+    $query = $database->query($sql);
+
+    if ($query->num_rows != 0){
+        echo "<span class='form-error'>Podany e-mail został już wykorzystany.</span>";
+        $isEmailEngaged = false;
+        $_SESSION['isValidationGood'] = false;
+    }
+
     if (strlen($password) < 8) {
         echo "<span class='form-error'>Podane hasło jest za krótkie.</span>";
         $errorPassword = true;
         $_SESSION['isValidationGood'] = false;
-        echo "hasło jest błędy";
     }
 
     if ($_SESSION['isValidationGood']) {
         echo "<span class='form-success'>Wszystko jest ok.</span>";
     }
+
+    $database->close();
+} else if ($_POST['email'] && $_POST['password'] && $_SESSION['isValidationGood']) {
+    include 'database.php';
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $sql = "insert into Users (email, password) value ('$email', '$password');";
+    /** @noinspection PhpUndefinedVariableInspection */
+    $database->query($sql) or die();
+    $database->close();
+    header("Location: login.html");
+} else {
+    header("Location: Register.html");
 }
 
-if ($_POST['email'] && $_POST['password'] && !$_POST['keypress'] && $_SESSION['isValidationGood']) {
-
-}
 
 ?>
 
@@ -72,14 +96,5 @@ if ($_POST['email'] && $_POST['password'] && !$_POST['keypress'] && $_SESSION['i
         passwordForm.classList.remove("input-error");
         passwordForm.classList.add("input-success");
     }
-
-    // if (!errorPassword && !errorEmail && !errorEmpty) {
-    //     form.forEach(element => {
-    //         if (element.tagName === "input") {
-    //             element.value = "";
-    //         }
-    //     })
-    // }
-
 
 </script>
