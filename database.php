@@ -5,7 +5,7 @@ $database = new mysqli(
     "wypozyczalnia-nart",
     "@7LaaM/iQQ.gsQoy",
     "wypozyczalnia-nart"
-) or die('Nie udało się połączyć z bazą danych. <br>' . $database->error);
+) or die($database->error);
 
 $sql = "CREATE TABLE IF NOT EXISTS `Users` (
     `id` INT NOT NULL AUTO_INCREMENT ,
