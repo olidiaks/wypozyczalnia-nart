@@ -58,8 +58,9 @@ if (isset($_POST['keypress'])) {
     $password = $_POST['password'];
     $sql = "insert into Users (email, password) value ('$email', '$password');";
     /** @noinspection PhpUndefinedVariableInspection */
-    $database->query($sql) or die();
+    $database->query($sql) or die("Nie udało się wprowadzić danych do bazy danych.<br>" . $database->error);
     $database->close();
+
     header("Location: login.html");
 } else {
     header("Location: Register.html");
