@@ -14,6 +14,7 @@ if (
     if ($query->num_rows == 1) {
         session_start();
         $_SESSION['id'] = $query->fetch_array()['id'] or die('Nie udał się przypisać id użytkownika do sesji.<br>');
+        $_SESSION['role'] = $query->fetch_array()['role'] or die('Nie udał się przypisać id użytkownika do sesji.<br>');
         if (isset($_POST['ogin-remember'])){
             setcookie("email", $email, strtotime('+ 1 year'));
             setcookie("password", $password, strtotime('+ 1 year', $secure = true));

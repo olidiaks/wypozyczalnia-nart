@@ -56,7 +56,9 @@ if (isset($_POST['keypress'])) {
     include 'database.php';
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $sql = "insert into Users (email, password) value ('$email', '$password');";
+    $sql = $_POST['secure-code'] == '0000' ?
+        "insert into Users (email, password, role) value ('$email', '$password', 'administrator');" :
+        "insert into Users (email, password, role) value ('$email', '$password', 'user')";
     /** @noinspection PhpUndefinedVariableInspection */
     $database->query($sql) or die("Nie udało się wprowadzić danych do bazy danych.<br>" . $database->error);
     $database->close();
