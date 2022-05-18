@@ -15,10 +15,18 @@ $sql = "CREATE TABLE IF NOT EXISTS `Users` (
     PRIMARY KEY (`id`))  ENGINE = InnoDB;";
 $database->query($sql) or die('Nie udało się utworzyć nowych baz danych.' . $database->error);
 
-$sql = "CREATE TABLE  IF NOT EXISTS `Skis` (
+$sql = "CREATE TABLE IF NOT EXISTS `Skis` (
         `id` INT NOT NULL AUTO_INCREMENT ,
         `brand` VARCHAR(65) NOT NULL , 
         `model` VARCHAR(65) NOT NULL , 
         `length` SMALLINT NOT NULL , 
         PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+$database->query($sql) or die('Nie udało się utworzyć nowych baz danych.' . $database->error);
+
+$sql = "CREATE TABLE IF NOT EXISTS `helmet` (
+    `id` INT NOT NULL AUTO_INCREMENT ,
+    `brand` VARCHAR(65) NOT NULL ,
+    `model` VARCHAR(65) NOT NULL ,
+    `size` TINYINT NOT NULL ,
+    PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 $database->query($sql) or die('Nie udało się utworzyć nowych baz danych.' . $database->error);
