@@ -11,9 +11,10 @@ if (isset($_POST['e-mail']) && isset($_POST['password'])) {
     $database->close() or die('Nie udało się poprawnie zamknąć połączenia z bazą danych<br>' . $database->error);
     if ($num_rows == 1) {
         session_start();
-        $_SESSION['id'] = $query->fetch_array()['id'] or die('Nie udał się przypisać id użytkownika do sesji.<br>');
-        $_SESSION['role'] = $query->fetch_array()['role'] or die('Nie udał się przypisać id użytkownika do sesji.<br>');
-        if (isset($_POST['ogin-remember'])){
+        $row = $query->fetch_array();
+        $_SESSION['id'] = $row['id'] or die('Nie udał się przypisać id użytkownika do sesji.<br>');
+        $_SESSION['role'] = $row['role'] or die('Nie udał się przypisać id użytkownika do sesji.<br>');
+        if (isset($_POST['login-remember'])){
             setcookie("email", $email, strtotime('+ 1 year'));
             setcookie("password", $password, strtotime('+ 1 year', $secure = true));
         }
