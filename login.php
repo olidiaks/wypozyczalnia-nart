@@ -1,3 +1,4 @@
+<?php
 
 if (isset($_POST['e-mail']) && isset($_POST['password'])) {
     $email = $_POST['e-mail'];
