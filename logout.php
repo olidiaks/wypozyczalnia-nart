@@ -6,3 +6,5 @@ $_SESSION['role'] = null;
 setcookie("email", "" ,1);
 setcookie("password", "" ,1);
 
+header("Location: login.html");
+
