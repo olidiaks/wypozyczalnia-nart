@@ -35,7 +35,7 @@ if (isset($_POST['keypress'])) {
     /** @noinspection PhpUndefinedVariableInspection */
     $query = $database->query($sql);
 
-    if ($query->num_rows != 0){
+    if ($query->num_rows != 0) {
         echo "<span class='form-error'>Podany e-mail został już wykorzystany.</span>";
         $isEmailEngaged = false;
         $_SESSION['isValidationGood'] = false;
@@ -50,8 +50,6 @@ if (isset($_POST['keypress'])) {
     if ($_SESSION['isValidationGood']) {
         echo "<span class='form-success'>Wszystko jest ok.</span>";
     }
-}
-
     $database->close();
 } else if ($_POST['email'] && $_POST['password'] && $_SESSION['isValidationGood']) {
     include 'database.php';
@@ -100,14 +98,6 @@ if (isset($_POST['keypress'])) {
         passwordForm.classList.remove("input-error");
         passwordForm.classList.add("input-success");
     }
-
-    // if (!errorPassword && !errorEmail && !errorEmpty) {
-    //     form.forEach(element => {
-    //         if (element.tagName === "input") {
-    //             element.value = "";
-    //         }
-    //     })
-    // }
 
 
 </script>
