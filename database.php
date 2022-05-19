@@ -30,3 +30,12 @@ $sql = "CREATE TABLE IF NOT EXISTS `helmet` (
     `size` TINYINT NOT NULL ,
     PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 $database->query($sql) or die('Nie udało się utworzyć nowych baz danych.' . $database->error);
+
+$sql = "CREATE TABLE IF NOT EXISTS `ski_pole` (
+    `id` INT NOT NULL AUTO_INCREMENT , 
+    `brand` VARCHAR(65) NOT NULL , 
+    `model` VARCHAR(65) NOT NULL , 
+    `high` SMALLINT NOT NULL , 
+    PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+
+$database->query($sql) or die('Nie udało się utworzyć nowych baz danych.' . $database->error);
