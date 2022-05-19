@@ -11,6 +11,7 @@ if (isset($id) && $role == "administrator" && isset($brand) && isset($model) && 
     $sql = "INSERT INTO ski_pole (brand, model, high) VALUE ('$brand', '$model', '$high');";
     /** @noinspection PhpUndefinedVariableInspection */
     $database->query($sql);
+    $database->close();
     include "add ski pole.html";
     echo "<p>Kijki zostały dodane do bazy danych.</p>";
 }
