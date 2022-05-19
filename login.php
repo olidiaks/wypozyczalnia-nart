@@ -14,9 +14,9 @@ if ((isset($_POST['e-mail']) && isset($_POST['password'])) ||
         $row = $query->fetch_array();
         $_SESSION['id'] = $row['id'] or die('Nie udał się przypisać id użytkownika do sesji.<br>');
         $_SESSION['role'] = $row['role'] or die('Nie udał się przypisać id użytkownika do sesji.<br>');
-        if (isset($_POST['login-remember'])){
+        if (isset($_POST['remember'])){
             setcookie("email", $email, strtotime('+ 1 year'));
-            setcookie("password", $password, strtotime('+ 1 year', $secure = true));
+            setcookie("password", $password, strtotime('+ 1 year',));
         }
         header("Location: main.html");
     } else {
