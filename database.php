@@ -47,3 +47,15 @@ $sql="CREATE TABLE IF NOT EXISTS `ski_boots` (
     PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 $database->query($sql) or die('Nie udało się utworzyć nowych baz danych.' . $database->error);
 
+$sql = "CREATE TABLE IF NOT EXISTS lend (
+    `id` INT NOT NULL AUTO_INCREMENT ,
+    `idUser` INT NOT NULL ,
+    `idSkis` INT NOT NULL ,
+    `idSkiBoots` INT NOT NULL ,
+    `idSkiPole` INT NOT NULL , 
+    `idHelmet` INT NOT NULL , 
+    `dateLend` DATE NOT NULL , 
+    `dateReturn` DATE NOT NULL , 
+    PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+$database->query($sql) or die('Nie udało się utworzyć nowych baz danych.' . $database->error);
+
