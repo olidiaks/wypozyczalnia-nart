@@ -58,7 +58,7 @@ function show_with_high(mysqli $database, string $sql, string $name): void
     <title>Document</title>
 </head>
 <body>
-<form action="lend_backend.php" method="get">
+<form action="lend backend.php" method="get">
     <?php
     include "database.php";
 
@@ -81,7 +81,8 @@ function show_with_high(mysqli $database, string $sql, string $name): void
 
     $database->close();
     ?>
-    <input type="date" name="dataReturn">
+    <label for="lend-data-return"></label>
+    <input type="date" name="dataReturn" id="lend-data-return">
     <button type="submit">Wypożycz!</button>
 </form>
 </body>
