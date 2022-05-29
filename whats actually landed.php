@@ -34,8 +34,11 @@ if (isset($id)) {
             and idHelmet = helmet.id
             and idSkiBoots = ski_boots.id
             and idSkiPole = ski_pole.id
-            and idUser = Users.id
-            and current_date < lend.dateReturn";
+            and idUser = Users.id";
+    if ($_GET["isActually"] ?? $_SESSION["isActually"] ?? 0) {
+        $sql .= " and current_date < lend.dateReturn";
+        $_SESSION["isActually"] = $_GET["isActually"];
+    }
     if ($role == "user") {
         $sql .= " and idUser = $id";
     }
