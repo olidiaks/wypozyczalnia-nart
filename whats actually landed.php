@@ -8,6 +8,14 @@
     <title>Co jest aktualnie wypożyczone?</title>
 </head>
 <body>
+<form action="whats%20actually%20landed.php" method="get">
+    <label for="sortByDate">Posortuj po dacie:</label>
+    <select id="sortByDate" name="sortByDate">
+        <option value="1">wypożyczenia</option>
+        <option value="2">zwrotu</option>
+    </select>
+    <button type="submit">Posortuj</button>
+</form>
 <hr>
 <?php
 session_start();
@@ -33,6 +41,16 @@ if (isset($id)) {
     }
 
     $sql .= " ORDER BY email";
+
+    switch ($_GET["sortByDate"] ?? 1) {
+        case 1:
+            $sql .= ", lend.dateLend, lend.dateReturn";
+            break;
+        case 2:
+            $sql .= ", lend.dateReturn, lend.dateLend";
+            break;
+    }
+
 
     /** @noinspection PhpUndefinedVariableInspection */
     $query = $database->query($sql);
