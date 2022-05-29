@@ -19,7 +19,8 @@ if (isset($id)) {
             Skis.brand, Skis.model, Skis.length,
             ski_boots.brand, ski_boots.model, ski_boots.size,
             ski_pole.brand, ski_pole.model, ski_pole.high,
-            helmet.brand, helmet.model, helmet.size
+            helmet.brand, helmet.model, helmet.size,
+            dateLend, dateReturn
             from lend, helmet, ski_pole, ski_boots, Skis, Users
             where idSkis = Skis.id
             and idHelmet = helmet.id
@@ -38,6 +39,11 @@ if (isset($id)) {
     while ($row = $query->fetch_row()) {
         echo "
              <p>e-mail użytkownika: $row[0]</p>
+             <p>Data:</p> 
+             <ul>
+                 <li>Wypożyczenia: $row[13]</li>
+                 <li>Zwrotu: $row[14]</li>
+            </ul>
              <p>Natry:</p>
              <ul>
                 <li>
