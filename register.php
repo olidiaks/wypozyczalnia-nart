@@ -1,27 +1,32 @@
 <?php
 /**
- * @param mixed $email
- * @param mixed $password
+ * @param string $email
+ * @param string $password
  * @param mysqli $database
  * @return bool[]
  */
-function validateRegisterForm(mixed $email, mixed $password, mysqli $database): array
+function validateRegisterForm(string $email, string $password, mysqli $database): array
 {
     $errorEmpty = false;
     $errorEmail = false;
     $errorPassword = false;
     $isGoodValidation = true;
+    $formSuccess = '';
+    $formError = '';
 
-    if (empty($email) && empty($password)) {
-        echo "<span class='form-error'>E-mail nie został podany.</span>";
+    if (empty($email)) {
+        $formError .= "<li class='form-error'>E-mail nie został podany.</li>";
         $errorEmpty = true;
         $isGoodValidation = false;
     }
 
+
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "<span class='form-error'>Podany email nie jest prawidłowy. Przykładowy email wygląda tak lama@lamisiwat.olidiaks</span>";
+        $formError .= "<li class='form-error'>Podany email nie jest prawidłowy. Przykładowy email wygląda tak lama@lamisiwat.olidiaks</li>";
         $errorEmail = true;
         $isGoodValidation = false;
+    } else {
+        $formSuccess .= "<li class='form-success'>Podano prawidłowy email</li>";
     }
 
     $sql = "select * from Users where email = '$email';";
@@ -29,19 +34,30 @@ function validateRegisterForm(mixed $email, mixed $password, mysqli $database): 
     $query = $database->query($sql);
 
     if ($query->num_rows != 0) {
-        echo "<span class='form-error'>Podany e-mail został już wykorzystany.</span>";
+        $formError .= "<li class='form-error'>Podany e-mail został już wykorzystany.</li>";
         $isGoodValidation = false;
+    } else {
+        $formSuccess .= "<li class='form-success'>Podany e-mail nie jest zajęty.</li>";
     }
 
     if (strlen($password) < 8) {
-        echo "<span class='form-error'>Podane hasło jest za krótkie.</span>";
+        $formError .= "<li class='form-error'>Podane hasło jest za krótkie.</li>";
         $errorPassword = true;
         $isGoodValidation = false;
+    } else {
+        $formSuccess .= "<li class='form-success'>Podane hasło jest prawidłowe</li>";
     }
 
-    if ($isGoodValidation) {
-        echo "<span class='form-success'>Wszystko jest ok.</span>";
-    }
+    ?>
+
+    <ol class="form-success">
+        <?php echo $formSuccess; ?>
+    </ol>
+    <ol class="form-error">
+        <?php echo $formError; ?>
+    </ol>
+
+    <?php
     return array($errorEmpty, $errorEmail, $errorPassword, $isGoodValidation);
 }
 
