@@ -1,0 +1,27 @@
+{
+  "name": "wyporzyczalnia-nart",
+  "version": "1.0.0",
+  "description": "Jest to prosta wypożyczalnia nart.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olidiaks/wypozyczalnia-nart.git"
+  },
+  "keywords": [
+    "Narty",
+    "Wyporzyczalnia",
+    "Sporty-zimowe"
+  ],
+  "author": "Oliwier Stępniak & Patryk Błądek",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/olidiaks/wypozyczalnia-nart/issues"
+  },
+  "homepage": "https://github.com/olidiaks/wypozyczalnia-nart#readme",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
