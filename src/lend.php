@@ -85,5 +85,6 @@ function show_with_high(mysqli $database, string $sql, string $name): void
     <input type="date" name="dataReturn" id="lend-data-return">
     <button type="submit">Wypożycz!</button>
 </form>
+<script src="lend.js"></script>
 </body>
 </html>
