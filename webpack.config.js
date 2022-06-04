@@ -129,6 +129,18 @@ module.exports = {
             template: "src/login.php",
             minify: false,
             inject: false,
+        }),
+        new HtmlWebpackPlugin({
+            filename: "main.html",
+            template: "src/main.html",
+            minify: true,
+            inject: false,
+        }),
+        new HtmlWebpackPlugin({
+            filename: "whats actually landed.php",
+            template: "src/whats actually landed.php",
+            minify: true,
+            inject: false
         })
     ],
 }
