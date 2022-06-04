@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/olidiaks/wypozyczalnia-nart#readme",
   "dependencies": {
+    "gsap": "^3.10.4",
     "jquery": "^3.6.0"
   },
   "devDependencies": {
