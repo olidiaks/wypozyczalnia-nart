@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="dist\style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form action="login.php" method="post">
+<form action="login.php" method="post" id="login">
     <label for="login-e-mail">Email:</label>
     <input type="text" name="e-mail" id="login-e-mail">
+    <br>
     <label for="login-password">Hasło:</label>
     <input type="password" name="password" id="login-password">
+    <br>
     <button type="submit">Zaloguj się.</button>
     <input type="checkbox" name="remember" id="login-remember" value="tak"><label for="login-remember">Czy zapamiętać zalogowanie</label>
+    <br>
     <a href="Register.html">Nie masz konta? Zarejestruj się teraz.</a>
 </form>
 <script src="login.js"></script>

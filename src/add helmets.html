@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Dodawanie kasków.</title>
+    <link href="dist\style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form action="add%20helmets.php" method="get">
+<form action="add%20helmets.php" method="get" id="helmet">
     <label for="helmet-brand">Marka:</label>
     <input type="text" name="brand" id="helmet-brand">
+    <br>
+    <br>
     <label for="helmet-model">Model:</label>
     <input type="text" name="model" id="helmet-model">
+    <br>
+    <br>
     <label for="helmet-size">Rozmiar:</label>
     <input type="number" name="size" id="helmet-size">
+    <br>
+    <br>
     <button type="submit">Dodaj!</button>
 </form>
 <script src="add%20helmets.js"></script>
