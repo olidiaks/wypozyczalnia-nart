@@ -18,7 +18,7 @@ if ((isset($_POST['e-mail']) && isset($_POST['password'])) ||
             setcookie("email", $email, strtotime('+ 1 year'));
             setcookie("password", $password, strtotime('+ 1 year',));
         }
-        header("Location: main.html");
+        header("Location: main.php");
     } else {
         include 'login.html';
         echo '<p>E-mail lub hasło są nie poprawne.</p>';
