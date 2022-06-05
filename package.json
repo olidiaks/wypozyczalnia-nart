@@ -4,7 +4,9 @@
   "description": "Jest to prosta wypożyczalnia nart.",
   "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "npm i && webpack"
   },
   "repository": {
     "type": "git",
