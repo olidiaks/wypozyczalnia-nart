@@ -141,6 +141,12 @@ module.exports = {
             template: "src/whats actually landed.php",
             minify: true,
             inject: false
+        }),
+        new HtmlWebpackPlugin({
+            filename: "logout.php",
+            template: "src/logout.php",
+            minify: false,
+            inject: false
         })
     ],
 }

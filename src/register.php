@@ -128,8 +128,7 @@ if (isset($_POST['keypress'])) {
     /** @noinspection PhpUndefinedVariableInspection */
     $database->query($sql) or die("Nie udało się wprowadzić danych do bazy danych.<br>" . $database->error);
     $database->close();
-    include "login.html";
-    echo "Zarejestrowano";
+    header("Location: login.html");
 } else if (isset($database)) {
     $database->close();
     include "Register.html";

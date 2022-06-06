@@ -14,7 +14,7 @@
         <a href="logout.php">Wyloguj się.</a>&nbsp;&nbsp;
     </div>
     <div id="include">
-        <?php include('../src/whats%20actually%20landed.php') ?>
+        <?php include('whats actually landed.php') ?>
     </div>
 
     <div id="footer">
