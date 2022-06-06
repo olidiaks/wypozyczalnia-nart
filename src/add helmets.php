@@ -16,5 +16,5 @@ if (isset($id) && isset($brand) && isset($model) && isset($size) && $role == "ad
     echo "<p>Z powodzeniem dodano kask do bazy danych</p>";
 }
 else{
-    header("Location: main.html");
+    header("Location: main.php");
 }

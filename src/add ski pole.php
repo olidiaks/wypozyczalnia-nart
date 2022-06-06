@@ -16,5 +16,5 @@ if (isset($id) && $role == "administrator" && isset($brand) && isset($model) && 
     echo "<p>Kijki zostały dodane do bazy danych.</p>";
 }
 else{
-    header('Location: main.html');
+    header('Location: main.php');
 }

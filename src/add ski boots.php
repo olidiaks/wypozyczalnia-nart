@@ -15,5 +15,5 @@ if (isset($id) && $role == "administrator" && isset($brand) && isset($model) && 
     echo "<p>Dodano buty do bazy danych.</p>";
 }
 else{
-    header("Location: main.html");
+    header("Location: main.php");
 }

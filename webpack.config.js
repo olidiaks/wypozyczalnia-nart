@@ -131,8 +131,8 @@ module.exports = {
             inject: false,
         }),
         new HtmlWebpackPlugin({
-            filename: "main.html",
-            template: "src/main.html",
+            filename: "main.php",
+            template: "src/main.php",
             minify: true,
             inject: false,
         }),

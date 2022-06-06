@@ -15,5 +15,5 @@ if (isset($id) && isset($brand) && isset($model) && isset($length) && $role == "
     echo "<p>Narty zostały dodane do bazy danych.</p>";
 }
 else{
-    header("Location: main.html");
+    header("Location: main.php");
 }
