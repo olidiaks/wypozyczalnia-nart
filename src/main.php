@@ -13,7 +13,9 @@
         <a href="whats%20actually%20landed.php">Co był lub jest wypożyczone.</a>&nbsp;&nbsp;
         <a href="logout.php">Wyloguj się.</a>&nbsp;&nbsp;
     </div>
-
+    <div id="include">
+        <?php include('../src/whats%20actually%20landed.php') ?>
+    </div>
 
     <div id="footer">
         <a href="add%20skis.html">Dodaj narty</a>&nbsp;&nbsp;
