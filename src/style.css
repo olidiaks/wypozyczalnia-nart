@@ -32,7 +32,6 @@ body{
 }
 a {
     text-decoration: none;
-    color: white;
     width: 30%;
     border-style: inherit;
     border-color: white;
@@ -64,16 +63,6 @@ a {
 	text-transform: uppercase;
 }
 #login{
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: right;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
     user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
@@ -87,7 +76,16 @@ a {
     text-align: center;
 	text-shadow: -4px -4px 8px silver;
 	text-transform: uppercase;
-    
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: right;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
 #ski{
     display: inline-block;
@@ -213,4 +211,16 @@ form{
 p{
     width: 100%;
     text-align: center;
+}
+.form-success{
+    color:greenyellow;
+}
+.form-error{
+    color: red;
+}
+.form-div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    text-align: start;
 }

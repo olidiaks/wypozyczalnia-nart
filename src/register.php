@@ -49,13 +49,15 @@ function validateRegisterForm(string $email, string $password, mysqli $database)
     }
 
     ?>
-
+    <div class="form-div">
     <ol class="form-success">
         <?php echo $formSuccess; ?>
     </ol>
     <ol class="form-error">
         <?php echo $formError; ?>
     </ol>
+    </div>
+
 
     <?php
     return array($errorEmpty, $errorEmail, $errorPassword, $isGoodValidation);
