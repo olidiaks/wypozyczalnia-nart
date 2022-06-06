@@ -1,43 +1,41 @@
-body{
+body {
     background-color: #5f5f5f;
     color: white;
-    font-family:sans-serif;
+    font-family: sans-serif;
 }
-#header{
+
+#header {
     width: 100%;
-	padding: 3px;
-	text-align: center;
-	font-size: 15px;
+    text-align: center;
+    font-size: 15px;
     border-radius: 4px;
     text-decoration: none;
     text-shadow: -4px -4px 8px silver;
-	text-transform: uppercase;
-	padding: 20px;
-
-
+    text-transform: uppercase;
 }
 
-
-#footer{
+#footer {
     margin-top: 30px;
-	clear:both;
-	height: 100%;
-	color: white;
-	font-family: Arial;
-	font-size: 20px;
-	text-align: center;
-	text-shadow: -4px -4px 8px silver;
-	text-transform: uppercase;
-	padding: 20px;
+    clear: both;
+    height: 100%;
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: -4px -4px 8px silver;
+    text-transform: uppercase;
+    padding: 20px;
 }
+
 a {
     text-decoration: none;
     width: 30%;
     border-style: inherit;
     border-color: white;
-    border-top: 2px ;
+    border-top: 2px;
 }
-#helmet{
+
+#helmet {
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
@@ -59,10 +57,11 @@ a {
     font-size: 25px;
     width: 100%;
     text-align: center;
-	text-shadow: -4px -4px 8px silver;
-	text-transform: uppercase;
+    text-shadow: -4px -4px 8px silver;
+    text-transform: uppercase;
 }
-#login{
+
+#login {
     user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
@@ -74,8 +73,8 @@ a {
     font-size: 25px;
     width: 100%;
     text-align: center;
-	text-shadow: -4px -4px 8px silver;
-	text-transform: uppercase;
+    text-shadow: -4px -4px 8px silver;
+    text-transform: uppercase;
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
@@ -87,32 +86,8 @@ a {
     -webkit-user-select: none;
     -moz-user-select: none;
 }
-#ski{
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: right;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out;
-    background-color: 0.15s ease-in-out;
-    border-color: 0.15s ease-in-out;
-    box-shadow: 0.15s ease-in-out;
-    font-size: 25px;
-    width: 100%;
-    text-align: center;
-	text-shadow: -4px -4px 8px silver;
-	text-transform: uppercase;
-}
-#boots{
+
+#ski {
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
@@ -134,11 +109,11 @@ a {
     font-size: 25px;
     width: 100%;
     text-align: center;
-	text-shadow: -4px -4px 8px silver;
-	text-transform: uppercase;
-    
+    text-shadow: -4px -4px 8px silver;
+    text-transform: uppercase;
 }
-#poles{
+
+#boots {
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
@@ -160,11 +135,12 @@ a {
     font-size: 25px;
     width: 100%;
     text-align: center;
-	text-shadow: -4px -4px 8px silver;
-	text-transform: uppercase;
-    
+    text-shadow: -4px -4px 8px silver;
+    text-transform: uppercase;
+
 }
-#regis{
+
+#poles {
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
@@ -186,11 +162,39 @@ a {
     font-size: 25px;
     width: 100%;
     text-align: center;
-	text-shadow: -4px -4px 8px silver;
-	text-transform: uppercase;
-    
+    text-shadow: -4px -4px 8px silver;
+    text-transform: uppercase;
+
 }
-button{
+
+#regis {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: right;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out;
+    background-color: 0.15s ease-in-out;
+    border-color: 0.15s ease-in-out;
+    box-shadow: 0.15s ease-in-out;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    text-shadow: -4px -4px 8px silver;
+    text-transform: uppercase;
+
+}
+
+button {
     display: block;
     align-items: center;
     padding: 0.375rem 0.75rem;
@@ -203,22 +207,27 @@ button{
     background-color: #e9ecef;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
-    margin:0 auto;
+    margin: 0 auto;
 }
-form{
+
+form {
     text-align: center;
 }
-p{
+
+p {
     width: 100%;
     text-align: center;
 }
-.form-success{
-    color:greenyellow;
+
+.form-success {
+    color: greenyellow;
 }
-.form-error{
+
+.form-error {
     color: red;
 }
-.form-div{
+
+.form-div {
     margin-left: auto;
     margin-right: auto;
     width: 15%;
