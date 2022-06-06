@@ -1,3 +1,3 @@
 import {showPageAnimation} from "./animation";
 
-showPageAnimation();
+showPageAnimation()

@@ -1,3 +1,3 @@
-import {generateDivAbsolut} from "./animation";
+import {showPageAnimation} from "./animation";
 
-generateDivAbsolut();
+showPageAnimation()

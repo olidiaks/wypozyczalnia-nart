@@ -2,7 +2,7 @@ const gsap = require("gsap");
 
 const generateDivAbsolut = () => {
     const body = document.body
-    const backgroundBodyColor = getComputedStyle(body).getPropertyValue("background");
+    const backgroundBodyColor = getComputedStyle(body).getPropertyValue("background-color");
     const div = document.createElement("div");
     div.classList.add("absoluteDiv");
     div.style.backgroundColor = backgroundBodyColor;
@@ -16,9 +16,11 @@ const slider = absoluteElement => {
 }
 
 const showPageAnimation = () => {
-    const element = generateDivAbsolut();
-    slider(element)
-
+    generateDivAbsolut();
+    const element = document.querySelector(".absoluteDiv");
+    setTimeout(()=>{
+        element.style.display = "none";
+    },1500);
 }
 
-export {showPageAnimation, generateDivAbsolut};
+export {showPageAnimation};
