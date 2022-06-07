@@ -58,7 +58,7 @@ function show_with_high(mysqli $database, string $sql, string $name): void
     <title>Document</title>
 </head>
 <body>
-<form action="lend backend.php" method="get">
+<form action="lend backend.php" method="get" id="land">
     <?php
     include "database.php";
 

@@ -8,7 +8,7 @@
     <title>Co jest aktualnie wypożyczone?</title>
 </head>
 <body>
-<form action="whats actually landed.php" method="get">
+<form action="whats actually landed.php" method="get" id="alanded">
     <label for="sortByDate">Posortuj po dacie:</label>
     <select id="sortByDate" name="sortByDate">
         <option value="1">wypożyczenia</option>

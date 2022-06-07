@@ -42,58 +42,12 @@ a {
     border-color: white;
     border-top: 2px ;
 }
-#helmet{
+#helmet, #login, #ski, #boots, #poles, #regis, #alanded, #land{
     float:none;
 	width: 100%;
     background-color: grey;
     color: white;
     margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-#login{
-    background-color: grey;
-    color: white;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    float:none;
-	width: 100%;
-	margin-bottom: -29px;
-}
-#ski{
-    margin-bottom: -29px;
-    background-color: grey;
-    color: white;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-	width: 100%;
-}
-#boots{
-    color: white;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-	margin-bottom: -29px;
-    background-color: grey;
-	width: 100%;
-}
-#poles{
-    text-align: center;
-	margin-bottom: -29px;
-    color: white;
-    margin-right: auto;
-	width: 100%;
-    background-color: grey;
-    margin-left: auto;
-}
-#regis{
-    float:none;
-    margin-left: auto;
-    width: 100%;
-    background-color: grey;
-    color: white;
     margin-right: auto;
     text-align: center;
 }
