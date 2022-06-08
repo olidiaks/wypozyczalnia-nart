@@ -17,9 +17,11 @@ const slider = absoluteElement => {
 
 const showPageAnimation = () => {
     generateDivAbsolut();
-    const element = document.querySelector(".absoluteDiv");
+    const elements = document.querySelectorAll(".absoluteDiv");
     setTimeout(()=>{
-        element.style.display = "none";
+        elements.forEach(element => {
+            element.style.display = "none";
+        })
     },1500);
 }
 
