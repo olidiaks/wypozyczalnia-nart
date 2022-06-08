@@ -42,7 +42,7 @@ a {
     border-color: white;
     border-top: 2px ;
 }
-#helmet, #login, #ski, #boots, #poles, #regis, #alanded, #land{
+#helmet, #login, #ski, #boots, #poles, #regis, #alanded, #land, #ski-boots-size{
     float:none;
 	width: 100%;
     background-color: grey;

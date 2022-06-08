@@ -55,6 +55,7 @@ function show_with_high(mysqli $database, string $sql, string $name): void
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../src/style.css" rel="stylesheet" type="text/css">
     <title>Document</title>
 </head>
 <body>
