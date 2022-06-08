@@ -109,9 +109,9 @@ function validateJs($errorEmpty, $errorEmail, $errorPassword): void
 
 session_start();
 
-$email = $_POST['email'];
-$password = $_POST['password'];
 include 'database.php';
+$email = $database->real_escape_string($_POST['email']);
+$password = $database->real_escape_string($_POST['password']);
 /** @noinspection PhpUndefinedVariableInspection */
 list($errorEmpty, $errorEmail, $errorPassword, $isGoodValidation) = validateRegisterForm($email, $password, $database);
 

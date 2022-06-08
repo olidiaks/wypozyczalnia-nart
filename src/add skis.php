@@ -7,7 +7,10 @@ $model = $_GET["model"];
 $length = $_GET["length"];
 if (isset($id) && isset($brand) && isset($model) && isset($length) && $role == "administrator"){
     include "database.php";
-    $sql = "insert into Skis (brand, model, length) values ('$brand', '$model', '$length');";
+    $sql = sprintf("insert into Skis (brand, model, length) values ('%s', '%s', '%s');",
+        $database->real_escape_string($brand),
+        $database->real_escape_string($model),
+        $database->real_escape_string($length));
     /** @noinspection PhpUndefinedVariableInspection */
     $database->query($sql);
     $database->close();

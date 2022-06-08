@@ -5,7 +5,9 @@ if ((isset($_POST['e-mail']) && isset($_POST['password'])) ||
     $email = $_POST['e-mail'] ?? $_COOKIE['email'];
     $password = $_POST['password'] ?? $_COOKIE['password'];
     include 'database.php';
-    $sql = "select * from Users where email = '$email' and password = '$password';";
+    $sql = sprintf("select * from Users where email = '%s' and password = '%s';",
+        $database->real_escape_string($email),
+        $database->real_escape_string($password));
     /** @noinspection PhpUndefinedVariableInspection */
     $query = $database->query($sql) or die('Nie udał się wyciągnąć z bazy danych id użytkownika.<br>' . $database->error);
     $database->close() or die('Nie udało się poprawnie zamknąć połączenia z bazą danych<br>' . $database->error);
