@@ -64,3 +64,8 @@ a {
     animation-fill-mode: both;
     background-color: #5f5f5f
 }
+
+.paddingDiv{
+    padding-left: 15px;
+    padding-right: 15px;
+}

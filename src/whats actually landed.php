@@ -59,7 +59,7 @@ if (isset($id)) {
     /** @noinspection PhpUndefinedVariableInspection */
     $query = $database->query($sql);
     while ($row = $query->fetch_row()) {
-        echo "
+        echo "<div class='paddingDiv'>
              <p>e-mail użytkownika: $row[0]</p>
              <p>Data:</p> 
              <ul>
@@ -114,6 +114,7 @@ if (isset($id)) {
                     Rozmiar: $row[12]
                 </li>
              </ul>
+             </div>
              <hr>
              ";
     }
