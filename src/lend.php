@@ -64,20 +64,20 @@ function show_with_high(mysqli $database, string $sql, string $name): void
     include "database.php";
 
     echo "<p>Narty:</p>";
-    $sql = "SELECT * FROM Skis";
+    $sql = "SELECT * FROM Skis ORDER BY brand, model, length ";
     /** @noinspection PhpUndefinedVariableInspection */
     show_with_length($database, $sql, "skis");
 
     echo "<p>Buty narciarskie:</p>";
-    $sql = "SELECT * FROM ski_boots";
+    $sql = "SELECT * FROM ski_boots ORDER BY brand, model, size";
     show_with_size($database, $sql, "ski_boots");
 
     echo "<p>Kijki narciarskie</p>";
-    $sql = "SELECT * FROM ski_pole";
+    $sql = "SELECT * FROM ski_pole ORDER BY brand, model, high";
     show_with_high($database, $sql, "ski_pole");
 
     echo "<p>Kaski:</p>";
-    $sql = "SELECT * FROM helmet";
+    $sql = "SELECT * FROM helmet ORDER BY brand, model, size";
     show_with_size($database, $sql, "helmet");
 
     $database->close();
