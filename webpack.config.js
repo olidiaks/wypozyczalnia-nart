@@ -2,8 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const output = __dirname + '/dist'
 const entry = __dirname + '/src/'
 module.exports = {
-    mode: 'development',
-    // mode: "production",
+    // mode: 'development',
+    mode: "production",
     entry: {
         "add helmets": entry + "add helmets.js",
         register: entry + "register.js",
