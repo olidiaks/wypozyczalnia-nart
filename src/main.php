@@ -11,6 +11,7 @@
 <div id="header">
     <a href="whats%20actually%20landed.php?isActually=1">Co aktualnie jest wypożyczone.</a>&nbsp;&nbsp;
     <a href="whats%20actually%20landed.php">Co był lub jest wypożyczone.</a>&nbsp;&nbsp;
+    <a href="lend.php">Wypożycz</a>&nbsp;&nbsp
     <a href="logout.php">Wyloguj się.</a>&nbsp;&nbsp;
 </div>
 <div id="include">
