@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Strona główna.</title>
+    <title>Wypożyczalnia nart | Strona główna.</title>
     <link href="../src/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
